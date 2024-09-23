@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Todo App
 
-## Getting Started
+A simple Todo application built using **Next.js** and **Tailwind CSS**. This app allows users to manage their todos with features like adding new todos, updating the task name, marking tasks as completed/undo, and deleting tasks.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Display a list of all todos.
+- Add a new todo.
+- Mark a todo as completed or undo.
+- Update the name of a todo.
+- Delete a todo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend**: Next.js, Tailwind CSS
+- **Backend**: Next.js API Routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. Clone the repository:
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/nachiket-more/UpUnikSelf-exercise
+   cd UpUnikSelf-exercise
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Start the development server:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The app will be running at http://localhost:3000
+
+## API Endpoints
+The app includes a backend with four main routes for managing todos:
+
+- GET /api/todos: Fetch all todos.
+- POST /api/todos: Create a new todo.
+- PATCH /api/todos/:id: Update an existing todo (e.g., mark as completed, edit task name).
+- DELETE /api/todos/:id: Delete a todo.
+
+## Usage
+- View Todos: All current todos will be displayed on the homepage.
+- Add Todo: Use the input form at the top to add a new todo.
+- Mark as Completed/Undo: Click on the checkbox to mark a task as completed or undo it.
+- Edit Task Name: Click on the edit button to modify the task name.
+- Delete Todo: Use the delete button to remove a todo from the list.

@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sampleTodos } from "@/lib/todos";
 
+// fetch all todos
 export async function GET() {
     return NextResponse.json(sampleTodos);
 }
 
+// create a new todo by id
 export async function POST(req: NextRequest) {
     const body = await req.json()
     const newTodo = {
@@ -18,6 +20,7 @@ export async function POST(req: NextRequest) {
 
 }
 
+// delete a todo by id
 export function DELETE(req: NextRequest) {
     const url = new URL(req.url)
     const idParam = url.searchParams.get('id')
@@ -43,6 +46,7 @@ export function DELETE(req: NextRequest) {
 }
 
 
+// update task or completed state for a todo by id
 export async function PATCH(req: NextRequest) {
     const url = new URL(req.url);
     const idParam = url.searchParams.get('id');
